@@ -5,12 +5,43 @@
 
 // container.appendChild(element);
 
-import React from 'react';
-import ReactDOM from 'react-dom';
+// const jsx = <h1>Hello, Platzi Badges!</h1>;
 
-const element = <h1>Hello, Platzi Badges!</h1>;
+// const element = React.createElement("h1", {}, "Hi, Im childrend");
 
-const container = document.getElementById('app');
+// const element = React.createElement(
+//   "a",
+//   { href: "google.com" },
+//   "Go to Google"
+// );
+
+// const name = "Brian";
+// const element = React.createElement("h1", {}, `Hi Im ${name}`);
+
+// const jsx = <h1>Hi Im {name}</h1>;
+
+// const jsx = (
+//   <div>
+//     <h1>Im Title</h1>
+//     <p>Im paragraph</p>
+//   </div>
+// );
+
+// const element = React.createElement(
+//   "div",
+//   {},
+//   React.createElement("h1", {}, "Im title 2"),
+//   React.createElement("p", {}, "Im paragraph 2")
+// );
+
+//Importamos nuestro componente/
 
 // ReactDOM.render(__qué__, __dónde__);
-ReactDOM.render(element, container);
+// ReactDOM.render(<Badge />, container);
+import ReactDOM from "react-dom";
+import React from "react";
+import Badge from "./components/Badge";
+
+const container = document.getElementById("app");
+
+ReactDOM.render(<Badge />, container);
