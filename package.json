@@ -29,5 +29,18 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sparragus/platzi-badges.git"
+  },
+  "keywords": [],
+  "author": "brian <briandv198@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sparragus/platzi-badges/issues"
+  },
+  "homepage": "https://github.com/Sparragus/platzi-badges#readme",
+  "description": ""
 }
