@@ -3,6 +3,7 @@ import confLogo from "../assets/images/badge-header.svg";
 import "../styles/badge.css";
 
 class Badge extends React.Component {
+  const;
   render() {
     return (
       <div className="badge">
@@ -11,15 +12,19 @@ class Badge extends React.Component {
         </div>
 
         <div className="badge__section-name">
-          <img src="" alt="avatar" className="section-name--avatar"></img>
+          <img
+            src={this.props.avatarUrl}
+            alt="avatar"
+            className="section-name--avatar"
+          ></img>
           <h1>
-            Brian <br /> Dominguez
+            {this.props.name} <br /> {this.props.lastName}
           </h1>
         </div>
 
         <div className="badge__section-info">
-          <p>Web Developer</p>
-          <p>@briandv98</p>
+          <p>{this.props.jobTitle}</p>
+          <p>@{this.props.twitter}</p>
         </div>
 
         <div className="badge__footer">
