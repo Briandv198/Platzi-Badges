@@ -29,13 +29,18 @@
   padding: 15px;
 }
 .badge__section-name h1 {
-  font-size: 1.5rem;
   padding-inline-start: 10px;
   text-align: left;
 }
+.badge__section-name .name-light {
+  font-weight: lighter;
+}
+.badge__section-name .name-bold {
+  font-weight: bold;
+}
 .section-name--avatar {
   min-width: 50px;
-  max-width: 150px;
+  max-width: 100px;
   border-radius: 100px;
   border: solid 1px #0a1128;
 }

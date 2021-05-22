@@ -22,7 +22,10 @@ class Badge extends React.Component {
             className="section-name--avatar"
           ></img>
           <h1>
-            {this.props.name} <br /> {this.props.lastName}
+            <span className="name-light">{this.props.name}</span>
+            <span className="name-bold">
+              <br /> {this.props.lastName}
+            </span>
           </h1>
         </div>
 

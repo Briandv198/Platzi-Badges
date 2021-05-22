@@ -5,7 +5,8 @@
 .navbar .navbar__logo {
   padding: 5px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  font-size: 1.4rem;
   text-decoration: none;
   color: #fff;
 }

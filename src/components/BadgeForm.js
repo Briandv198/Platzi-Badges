@@ -1,4 +1,5 @@
 import React from "react";
+import "./styles/badgeForm.css";
 
 class badgeForm extends React.Component {
   // heandelChange = (e) => {
@@ -21,7 +22,7 @@ class badgeForm extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div className="form">
         <h1>New Attendant</h1>
         <form onSubmit={this.heandelSubmit}>
           <div className="form-group">
@@ -79,7 +80,11 @@ class badgeForm extends React.Component {
             ></input>
           </div>
 
-          <button onClick={this.heandelClick} className="" type="submit">
+          <button
+            onClick={this.heandelClick}
+            className="submit-button"
+            type="submit"
+          >
             Save
           </button>
         </form>

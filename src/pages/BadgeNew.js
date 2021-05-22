@@ -27,8 +27,8 @@ class BadgeNew extends React.Component {
 
   render() {
     return (
-      <div>
-        <Navbar />
+      <div className="badge-new">
+        <Navbar className="navbar" />
         <div className="hero-sapece">
           <img src={logoHero} alt="hero"></img>
         </div>
@@ -41,7 +41,7 @@ class BadgeNew extends React.Component {
           avatarUrl="https://cutt.ly/jb8eoPb"
           className="badge"
         />
-        <div>
+        <div className="badge-form">
           <BadgeForm
             onChange={this.heandleChange}
             formValue={this.state.form}
