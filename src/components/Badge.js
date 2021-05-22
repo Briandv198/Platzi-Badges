@@ -1,6 +1,6 @@
 import React from "react";
 import confLogo from "../assets/images/badge-header.svg";
-import "../styles/badge.css";
+import "./styles/badge.css";
 
 class Badge extends React.Component {
   const;
@@ -8,7 +8,11 @@ class Badge extends React.Component {
     return (
       <div className="badge">
         <div className="badge__header">
-          <img src={confLogo} alt="Logo conferencia"></img>
+          <img
+            src={confLogo}
+            alt="Logo conferencia"
+            className="badge__header--image"
+          ></img>
         </div>
 
         <div className="badge__section-name">

@@ -1,0 +1,26 @@
+.navbar {
+  padding: 0 15px;
+  background-color: #310a31;
+}
+.navbar .navbar__logo {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+.logo--img:hover,
+.logo--light:hover,
+.logo--bold:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.navbar__logo .logo--img {
+  width: 130px;
+  padding: 0 10px;
+}
+.navbar__logo .logo--light {
+  font-weight: lighter;
+}
+.navbar__logo .logo--bold {
+  font-weight: bold;
+}

@@ -11,28 +11,35 @@
 .badge {
   width: 100%;
   padding: 0;
+  border-radius: 10px;
   background-color: #fff;
-  box-shadow: 0px 2px 4px #310a31;
+  box-shadow: 0px 2px 4px #0a1128;
 }
 .badge__header {
   width: 100%;
   border-radius: 10px 10px 0 0;
-  background-color: #310a31;
+  background-color: #0a1128;
 }
+.badge__header--image {
+  min-width: 50px;
+  max-width: 100px;
+}
+
 .badge__section-name {
   padding: 15px;
 }
 .badge__section-name h1 {
-  padding: 0 20px;
+  font-size: 1.5rem;
+  padding-inline-start: 10px;
   text-align: left;
 }
 .section-name--avatar {
-  width: 120px;
+  min-width: 50px;
+  max-width: 150px;
   border-radius: 100px;
-  border: solid 1px #310a31;
+  border: solid 1px #0a1128;
 }
 .badge__section-info {
-  padding-block-start: 25px;
   flex-direction: column;
   background-color: rgba(243, 232, 238, 0.5);
 }
