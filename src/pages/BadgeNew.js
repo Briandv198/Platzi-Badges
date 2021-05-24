@@ -29,24 +29,26 @@ class BadgeNew extends React.Component {
     return (
       <div className="badge-new">
         <Navbar className="navbar" />
-        <div className="hero-sapece">
-          <img src={logoHero} alt="hero"></img>
-        </div>
-        <Badge
-          name={this.state.form.firstName}
-          lastName={this.state.form.lastName}
-          jobTitle={this.state.form.jobTitle}
-          twitter={this.state.form.twitter}
-          email={this.state.form.email}
-          avatarUrl="https://cutt.ly/jb8eoPb"
-          className="badge"
-        />
-        <div className="badge-form">
-          <BadgeForm
-            onChange={this.heandleChange}
-            formValue={this.state.form}
+        <main className="main">
+          <div className="hero-sapece">
+            <img src={logoHero} alt="hero"></img>
+          </div>
+          <Badge
+            name={this.state.form.firstName}
+            lastName={this.state.form.lastName}
+            jobTitle={this.state.form.jobTitle}
+            twitter={this.state.form.twitter}
+            email={this.state.form.email}
+            avatarUrl="https://cutt.ly/jb8eoPb"
+            className="badge"
           />
-        </div>
+          <div className="badge-form">
+            <BadgeForm
+              onChange={this.heandleChange}
+              formValue={this.state.form}
+            />
+          </div>
+        </main>
       </div>
     );
   }

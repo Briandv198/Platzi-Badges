@@ -35,7 +35,7 @@ class Badge extends React.Component {
         </div>
 
         <div className="badge__footer">
-          <p>#conferencia</p>
+          <p>#conference</p>
         </div>
       </div>
     );

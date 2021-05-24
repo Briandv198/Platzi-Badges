@@ -1,5 +1,7 @@
 .navbar {
+  height: 50px;
   padding: 0 15px;
+  display: flex;
   background-color: #310a31;
 }
 .navbar .navbar__logo {

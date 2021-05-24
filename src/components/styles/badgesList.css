@@ -1,0 +1,55 @@
+.badges__list {
+  margin-inline: 20px;
+  text-align: center;
+}
+.badges__list li {
+  margin-block-start: 20px;
+  padding: 5px;
+  display: grid;
+  grid-template: 1fr / repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  border-radius: 10px;
+  list-style: none;
+  background-color: #fff;
+  box-shadow: 0px 0px 3px #0a1128;
+  transform: scale(1, 1);
+  transition: transform 0.4s;
+}
+.badges__list li:hover {
+  transform: scale(1.1, 1.1);
+}
+.badges__list li img {
+  grid-column: 1 / 2;
+  width: 38px;
+  border-radius: 50%;
+}
+.badges__list .info {
+  grid-column: 2 / 4;
+  margin-inline-start: 15px;
+}
+.badges__list .info .list-name {
+  font-size: 1.2rem;
+}
+.badges__list .info .text-light {
+  font-weight: lighter;
+}
+.badges__list .info .text-bold {
+  font-weight: bold;
+}
+.badges__list .info .list-social {
+  display: flex;
+  justify-content: space-between;
+  color: #15a9f4;
+  font-size: 1rem;
+}
+.badges__list .info .list-social .twitter {
+  width: 15px;
+  height: 15px;
+  margin-inline-end: 5px;
+  display: block;
+  background-image: url("../../assets/images/twitter.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
