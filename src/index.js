@@ -40,9 +40,9 @@
 // ReactDOM.render(<Badge />, container);
 import ReactDOM from "react-dom";
 import React from "react";
-import Badges from "./pages/BadgeNew.js";
+import App from "./components/App.js";
 import "./global.css";
 
 const container = document.getElementById("app");
 
-ReactDOM.render(<Badges />, container);
+ReactDOM.render(<App />, container);

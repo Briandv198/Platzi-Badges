@@ -12,11 +12,11 @@
   text-decoration: none;
   color: #fff;
 }
-.logo--img:hover,
+/* .logo--img:hover,
 .logo--light:hover,
 .logo--bold:hover {
   background-color: rgba(255, 255, 255, 0.5);
-}
+} */
 .navbar__logo .logo--img {
   width: 130px;
   padding: 0 10px;

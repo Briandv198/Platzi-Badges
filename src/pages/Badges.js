@@ -1,8 +1,12 @@
 import React from "react";
-import Navbar from "../components/Navbar.js";
+
 import BadgesList from "../components/BadgesList.js";
+import MainButton from "../components/MainButton.js";
+
 import confLogo from "../assets/images/badge-header.svg";
 import "./styles/badges.css";
+
+import { Link } from "react-router-dom";
 
 class Badges extends React.Component {
   state = {
@@ -42,15 +46,13 @@ class Badges extends React.Component {
   render() {
     return (
       <div className="badges">
-        <Navbar />
-
         <div className="badges__hero">
           <img src={confLogo} alt="Logo"></img>
         </div>
 
-        <a href="#" className="main__button">
-          <button>New Badge</button>
-        </a>
+        <Link to="/badges/new" className="main__button">
+          <MainButton content="New Badge"></MainButton>
+        </Link>
 
         <BadgesList badges={this.state.data} />
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/badgeForm.css";
+import MainButton from "./MainButton";
 
 class badgeForm extends React.Component {
   // heandelChange = (e) => {
@@ -79,15 +80,8 @@ class badgeForm extends React.Component {
               value={this.props.formValue.twitter}
             ></input>
           </div>
-
-          <button
-            onClick={this.heandelClick}
-            className="submit-button"
-            type="submit"
-          >
-            Save
-          </button>
         </form>
+        <MainButton onClick={this.heandelClick} type="submit" content="save" />
       </div>
     );
   }
