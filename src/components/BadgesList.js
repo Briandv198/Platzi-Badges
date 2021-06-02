@@ -1,14 +1,24 @@
 import React from "react";
+
+import Gravatar from "./Gravatar";
+
 import "./styles/badgesList.css";
 
 class BadgesList extends React.Component {
   render() {
+    if (this.props.badges.length === 0) {
+      return (
+        <div>
+          <h3>No encontramos nungun Badge</h3>
+        </div>
+      );
+    }
     return (
       <ul className="badges__list">
         {this.props.badges.map((badge) => {
           return (
             <li key={badge.id}>
-              <img src={badge.avatarUrl} alt="avatar"></img>
+              <Gravatar email={badge.email} alt="avatar" />
               <div className="info">
                 <p className="list-name">
                   <span className="text-light">{badge.firstName} </span>

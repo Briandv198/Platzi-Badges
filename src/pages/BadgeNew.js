@@ -3,6 +3,7 @@ import Badge from "../components/Badge.js";
 import BadgeForm from "../components/BadgeForm.js";
 import "./styles/badgeNew.css";
 import logoHero from "../assets/images/badge-header.svg";
+import api from "../api";
 
 class BadgeNew extends React.Component {
   state = {
@@ -24,6 +25,18 @@ class BadgeNew extends React.Component {
     });
   };
 
+  heandleSubmit = async (e) => {
+    e.preventDefault();
+    this.setState({ loading: true, error: null });
+
+    try {
+      await api.badges.create(this.state.form);
+      this.setState({ loading: false });
+    } catch (error) {
+      this.setState({ loading: false, error: error });
+    }
+  };
+
   render() {
     return (
       <div className="badge-new">
@@ -32,10 +45,10 @@ class BadgeNew extends React.Component {
             <img src={logoHero} alt="hero"></img>
           </div>
           <Badge
-            name={this.state.form.firstName}
-            lastName={this.state.form.lastName}
-            jobTitle={this.state.form.jobTitle}
-            twitter={this.state.form.twitter}
+            name={this.state.form.firstName || "First-Name"}
+            lastName={this.state.form.lastName || "Last-Name"}
+            jobTitle={this.state.form.jobTitle || "Job-Title"}
+            twitter={this.state.form.twitter || "Twitter"}
             email={this.state.form.email}
             avatarUrl="https://cutt.ly/jb8eoPb"
             className="badge"
@@ -43,6 +56,7 @@ class BadgeNew extends React.Component {
           <div className="badge-form">
             <BadgeForm
               onChange={this.heandleChange}
+              onSubmit={this.heandleSubmit}
               formValue={this.state.form}
             />
           </div>

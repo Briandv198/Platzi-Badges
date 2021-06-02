@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 
 import BadgesList from "../components/BadgesList.js";
 import MainButton from "../components/MainButton.js";
+import Loading from "../components/Loading.js";
+import Error from "../components/Error.js";
 
 import confLogo from "../assets/images/badge-header.svg";
 import "./styles/badges.css";
@@ -31,7 +33,9 @@ class Badges extends React.Component {
     try {
       const data = await api.badges.list();
       this.setState({ loading: false, data: data });
-    } catch (error) {}
+    } catch (error) {
+      this.setState({ loading: false, error: error });
+    }
   };
 
   componentDidUpdate(prevProps, prevState) {
@@ -56,7 +60,10 @@ class Badges extends React.Component {
   render() {
     console.log("2/4: render");
     if (this.state.loading === true) {
-      return "Loading...";
+      return <Loading />;
+    }
+    if (this.state.error) {
+      return <Error error={this.state.error} />;
     }
     return (
       <div className="badges">

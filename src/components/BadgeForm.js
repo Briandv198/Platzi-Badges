@@ -16,16 +16,16 @@ class badgeForm extends React.Component {
   heandelClick = (e) => {
     console.log("Button was click");
   };
-  heandelSubmit = (e) => {
-    e.preventDefault();
-    console.log("Button was submit");
-    console.log(this.state);
-  };
+  // heandelSubmit = (e) => {
+  //   e.preventDefault();
+  //   console.log("Button was submit");
+  //   console.log(this.state);
+  // };
   render() {
     return (
       <div className="form">
         <h1>New Attendant</h1>
-        <form onSubmit={this.heandelSubmit}>
+        <form onSubmit={this.props.onSubmit}>
           <div className="form-group">
             <label>First name</label>
             <input
@@ -80,8 +80,12 @@ class badgeForm extends React.Component {
               value={this.props.formValue.twitter}
             ></input>
           </div>
+          <MainButton
+            onClick={this.heandelClick}
+            type="submit"
+            content="save"
+          />
         </form>
-        <MainButton onClick={this.heandelClick} type="submit" content="save" />
       </div>
     );
   }
