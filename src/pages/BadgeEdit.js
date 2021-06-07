@@ -5,12 +5,12 @@ import Badge from "../components/Badge.js";
 import BadgeForm from "../components/BadgeForm.js";
 import Loading from "../components/Loading";
 
-import "./styles/badgeNew.css";
+import "./styles/badgeEdit.css";
 import logoHero from "../assets/images/badge-header.svg";
 
-class BadgeNew extends React.Component {
+class BadgeEdit extends React.Component {
   state = {
-    loading: false,
+    loading: true,
     error: null,
     form: {
       firstName: "",
@@ -21,6 +21,19 @@ class BadgeNew extends React.Component {
     },
   };
 
+  componentDidMount() {
+    this.fetchData();
+  }
+
+  fetchData = async (e) => {
+    try {
+      const data = await api.badges.read(this.props.match.params.badgeId);
+
+      this.setState({ loading: false, form: data });
+    } catch (error) {
+      this.setState({ loading: false, error: error });
+    }
+  };
   heandleChange = (e) => {
     this.setState({
       form: {
@@ -35,7 +48,7 @@ class BadgeNew extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
-      await api.badges.create(this.state.form);
+      await api.badges.update(this.props.match.params.badgeId, this.state.form);
       this.setState({ loading: false });
 
       this.props.history.push("/badges");
@@ -49,7 +62,7 @@ class BadgeNew extends React.Component {
       return <Loading />;
     }
     return (
-      <div className="badge-new">
+      <div className="badge-edit">
         <main className="main">
           <div className="hero-sapece">
             <img src={logoHero} alt="hero"></img>
@@ -65,7 +78,7 @@ class BadgeNew extends React.Component {
           />
           <div className="badge-form">
             <BadgeForm
-              title="New Attendant"
+              title="Edit Attendant"
               onChange={this.heandleChange}
               onSubmit={this.heandleSubmit}
               formValue={this.state.form}
@@ -78,4 +91,4 @@ class BadgeNew extends React.Component {
   }
 }
 
-export default BadgeNew;
+export default BadgeEdit;

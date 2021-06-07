@@ -24,7 +24,7 @@ class badgeForm extends React.Component {
   render() {
     return (
       <div className="form">
-        <h1>New Attendant</h1>
+        <h1>{this.props.title}</h1>
         <form onSubmit={this.props.onSubmit}>
           <div className="form-group">
             <label>First name</label>
@@ -85,6 +85,7 @@ class badgeForm extends React.Component {
             type="submit"
             content="save"
           />
+          {this.props.error && <p>{this.props.error.message}</p>}
         </form>
       </div>
     );
