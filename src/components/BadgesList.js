@@ -5,18 +5,51 @@ import Gravatar from "./Gravatar";
 
 import "./styles/badgesList.css";
 
-class BadgesList extends React.Component {
-  render() {
-    if (this.props.badges.length === 0) {
-      return (
-        <div>
-          <h3>No encontramos nungun Badge</h3>
-        </div>
-      );
-    }
+function useSearchBadges(badges) {
+  const [query, setQuery] = React.useState("");
+
+  const [filteredBadges, setFilteredBadges] = React.useState(badges);
+
+  React.useMemo(() => {
+    const results = badges.filter((badge) => {
+      return `${badge.firstName} ${badge.lastName}`
+        .toLowerCase()
+        .includes(query.toLocaleLowerCase());
+    });
+
+    setFilteredBadges(results);
+  }, [badges, query]);
+
+  return { setQuery, filteredBadges, query };
+}
+
+function BadgesList(props) {
+  const badges = props.badges;
+
+  const { setQuery, filteredBadges, query } = useSearchBadges(badges);
+
+  if (filteredBadges.length === 0) {
     return (
-      <ul className="badges__list">
-        {this.props.badges
+      <div>
+        <h3>No encontramos nungun Badge</h3>
+      </div>
+    );
+  }
+
+  return (
+    <div className="badges__list">
+      <div>
+        <label>Filter Badges</label>
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => {
+            setQuery(e.target.value);
+          }}
+        />
+      </div>
+      <ul>
+        {filteredBadges
           .map((badge) => {
             return (
               <Link to={`/badges/${badge.id}`}>
@@ -38,8 +71,8 @@ class BadgesList extends React.Component {
           })
           .reverse()}
       </ul>
-    );
-  }
+    </div>
+  );
 }
 
 export default BadgesList;
