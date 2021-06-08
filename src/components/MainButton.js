@@ -5,7 +5,7 @@ class MainButton extends React.Component {
   render() {
     return (
       <button
-        className="main-button"
+        className={`main-button ${this.props.color}`}
         onClick={this.props.onClick}
         type={this.props.type}
       >

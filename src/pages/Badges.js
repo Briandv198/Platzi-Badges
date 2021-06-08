@@ -75,7 +75,7 @@ class Badges extends React.Component {
         </div>
 
         <Link to="/badges/new" className="main__button">
-          <MainButton content="New Badge"></MainButton>
+          <MainButton content="New Badge" color="green"></MainButton>
         </Link>
 
         {this.state.loading && "Loading.."}

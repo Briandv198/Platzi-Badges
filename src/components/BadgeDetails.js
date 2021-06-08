@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import Badge from "./Badge";
 import MainButton from "./MainButton";
+import DeleteBadgeModal from "./DeleteBadgeModal";
 
 import LogoHero from "../assets/images/badge-header.svg";
 import "./styles/badgesDetails.css";
@@ -27,9 +28,21 @@ function BadgeDetails(props) {
       />
       <div className="container-buttons">
         <Link to={`/badges/${badge.id}/edit`} className="edit-button">
-          <MainButton content="Edit"></MainButton>
+          <MainButton content="Edit" color="green" />
         </Link>
-        <MainButton content="Delete" className="delete-button" />
+        <div>
+          <MainButton
+            onClick={props.onOpenModal}
+            content="Delete"
+            className="delete-button"
+            color="red"
+          />
+          <DeleteBadgeModal
+            isOpen={props.modalIsOpen}
+            onClose={props.onCloseModal}
+            onDeleteBadge={props.onDeleteBadge}
+          />
+        </div>
       </div>
     </div>
   );

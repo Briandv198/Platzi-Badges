@@ -84,6 +84,7 @@ class badgeForm extends React.Component {
             onClick={this.heandelClick}
             type="submit"
             content="save"
+            color="green"
           />
           {this.props.error && <p>{this.props.error.message}</p>}
         </form>
