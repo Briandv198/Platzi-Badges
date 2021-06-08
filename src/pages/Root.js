@@ -7,7 +7,6 @@ import confLogo from "../assets/images/badge-header.svg";
 import "./styles/root.css";
 
 import ImageHero from "../assets/images/space.png";
-import VideoSpace from "../assets/video/videoSpace.mp4";
 
 class Root extends React.Component {
   render() {
