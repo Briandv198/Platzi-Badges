@@ -16,6 +16,7 @@
   width: 400px;
   padding: 10px;
   background-color: #ffffff;
+  border-radius: 5px;
 }
 
 .Modal__close-button {
@@ -25,4 +26,10 @@
   border: 0;
   background-color: #f5f5f5;
   padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: 1px #fff solid;
+}
+.Modal__close-button:hover {
+  cursor: pointer;
+  border: 1px #0a1128 solid;
 }
