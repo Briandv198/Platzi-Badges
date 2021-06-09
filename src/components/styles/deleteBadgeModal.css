@@ -2,5 +2,11 @@
   margin-inline-start: 15px;
 }
 .delete-buttons button {
-  margin-inline-start: 15px;
+  margin-inline: 15px;
+}
+@media (max-width: 500px) {
+  .delete-buttons {
+    display: flex;
+    justify-content: center;
+  }
 }

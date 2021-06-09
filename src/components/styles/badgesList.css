@@ -11,7 +11,7 @@
   margin-block-end: 5px;
 }
 .badges__list .filter input {
-  max-width: 250px;
+  max-width: 255px;
   min-width: 100px;
   height: 25px;
   border: none;

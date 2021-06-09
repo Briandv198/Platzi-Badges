@@ -10,6 +10,7 @@
 }
 .badge {
   width: 100%;
+  min-width: 150px;
   padding: 0;
   border-radius: 10px;
   background-color: #fff;

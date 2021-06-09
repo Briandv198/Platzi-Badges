@@ -33,3 +33,8 @@
   cursor: pointer;
   border: 1px #0a1128 solid;
 }
+@media (max-width: 500px) {
+  .Modal__container {
+    width: 200px;
+  }
+}

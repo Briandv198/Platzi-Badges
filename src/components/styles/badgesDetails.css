@@ -32,3 +32,29 @@
   justify-content: flex-start;
   align-items: center;
 }
+@media (max-width: 910px) {
+  .container {
+    grid-template: 3fr 1fr 3fr 1fr / 1fr 3fr 1fr;
+  }
+  .container .hero-space {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    flex-direction: column;
+  }
+  .container .hero-space h1 {
+    margin-block-start: 15px;
+  }
+  .container .badge {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+  .container .container-buttons {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .container .container-buttons button {
+    margin-inline: 15px;
+  }
+}

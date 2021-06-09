@@ -27,3 +27,8 @@
 .navbar__logo .logo--bold {
   font-weight: bold;
 }
+@media (max-width: 500px) {
+  .navbar .navbar__logo .header-text {
+    display: none;
+  }
+}

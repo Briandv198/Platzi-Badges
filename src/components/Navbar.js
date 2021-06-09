@@ -9,8 +9,10 @@ class Navbar extends React.Component {
       <div className="navbar">
         <Link to="/" className="navbar__logo">
           <img src={logo} alt="logo" className="logo--img"></img>
-          <span className="logo--light">Conference</span>
-          <span className="logo--bold">Badges</span>
+          <div className="header-text">
+            <span className="logo--light">Conference</span>
+            <span className="logo--bold">Badges</span>
+          </div>
         </Link>
       </div>
     );
