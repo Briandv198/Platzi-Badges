@@ -14,14 +14,17 @@ class Root extends React.Component {
       <div className="root">
         <img src={confLogo} alt="root__Logo" className="logo"></img>
 
-        <h1 className="root__title">Print Your Badges</h1>
+        <div className="root__info">
+          <h1 className="info--title">Print Your Badges</h1>
 
-        <Link to="/badges">
-          <MainButton content="Start Now"></MainButton>
-        </Link>
-        <p className="root__paragraph">
-          The easiest way to manage your conference
-        </p>
+          <p className="info--paragraph">
+            The easiest way to manage your conference
+          </p>
+
+          <Link to="/badges" className="button">
+            <MainButton content="Start Now" color="green"></MainButton>
+          </Link>
+        </div>
       </div>
     );
   }
