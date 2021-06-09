@@ -1,6 +1,29 @@
 .badges__list {
   margin-inline: 20px;
 }
+.badges__list .filter {
+  display: flex;
+  flex-direction: column;
+}
+.badges__list .filter label {
+  font-size: 1.5rem;
+  margin-inline-start: 10px;
+  margin-block-end: 5px;
+}
+.badges__list .filter input {
+  max-width: 250px;
+  min-width: 100px;
+  height: 25px;
+  border: none;
+  padding-block: 5px;
+  padding-inline: 7px;
+  box-shadow: 0px 0px 2px #0a1128;
+  border-radius: 30px;
+}
+.badges__list .filter input:focus {
+  border: none;
+  outline: none;
+}
 .badges__list a {
   text-decoration: none;
   color: #310a31;

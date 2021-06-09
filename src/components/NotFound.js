@@ -8,7 +8,7 @@ function NotFound(props) {
   return (
     <div className="not-found__container">
       <h1>Ups!!!</h1>
-      <h2>notFound</h2>
+      <h2>Not Found</h2>
       <img src={Error} />
     </div>
   );

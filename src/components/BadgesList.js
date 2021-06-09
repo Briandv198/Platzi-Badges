@@ -38,7 +38,7 @@ function BadgesList(props) {
 
   return (
     <div className="badges__list">
-      <div>
+      <div className="filter">
         <label>Filter Badges</label>
         <input
           type="text"

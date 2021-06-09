@@ -60,7 +60,7 @@ class BadgeDetailsContainer extends React.Component {
     }
 
     if (this.state.error) {
-      return this.state.error;
+      return this.state.error.message;
     }
 
     return (
