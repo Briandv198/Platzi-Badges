@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import BadgesList from "../components/BadgesList.js";
 import MainButton from "../components/MainButton.js";
-import Loading from "../components/Loading.js";
+import { Loader, LoaderMini } from "../components/Loader.js";
 import Error from "../components/Error.js";
 
 import confLogo from "../assets/images/badge-header.svg";
@@ -63,7 +63,7 @@ class Badges extends React.Component {
   render() {
     console.log("2/4: render");
     if (this.state.loading === true && this.state.data === undefined) {
-      return <Loading />;
+      return <Loader />;
     }
     if (this.state.error) {
       return <Error error={this.state.error} />;
@@ -77,10 +77,15 @@ class Badges extends React.Component {
         <Link to="/badges/new" className="main__button">
           <MainButton content="New Badge" color="green"></MainButton>
         </Link>
+        <div className="badges-container">
+          <BadgesList badges={this.state.data} />
 
-        {this.state.loading && "Loading.."}
-
-        <BadgesList badges={this.state.data} />
+          {this.state.loading && (
+            <div className="loader-mini">
+              <LoaderMini />
+            </div>
+          )}
+        </div>
       </div>
     );
   }

@@ -3,7 +3,7 @@ import api from "../api";
 
 import BadgeDetails from "../components/BadgeDetails";
 
-import Loading from "../components/Loading";
+import { Loader } from "../components/Loader";
 
 class BadgeDetailsContainer extends React.Component {
   state = {
@@ -56,7 +56,7 @@ class BadgeDetailsContainer extends React.Component {
 
   render() {
     if (this.state.loading) {
-      return <Loading />;
+      return <Loader />;
     }
 
     if (this.state.error) {

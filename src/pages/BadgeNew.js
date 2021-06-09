@@ -3,7 +3,7 @@ import api from "../api";
 
 import Badge from "../components/Badge.js";
 import BadgeForm from "../components/BadgeForm.js";
-import Loading from "../components/Loading";
+import { Loader } from "../components/Loader";
 
 import "./styles/badgeNew.css";
 import logoHero from "../assets/images/badge-header.svg";
@@ -46,7 +46,7 @@ class BadgeNew extends React.Component {
 
   render() {
     if (this.state.loading) {
-      return <Loading />;
+      return <Loader />;
     }
     return (
       <div className="badge-new">

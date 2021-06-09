@@ -20,7 +20,12 @@
   align-self: flex-end;
   justify-self: end;
 }
-.badges .badges__list {
+.badges .badges-container {
   grid-column: 2 / 3;
   grid-row: 3 / 4;
+}
+.loader-mini {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
