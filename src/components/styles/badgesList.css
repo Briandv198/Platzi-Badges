@@ -18,7 +18,7 @@
   padding-block: 5px;
   padding-inline: 7px;
   box-shadow: 0px 0px 2px #0a1128;
-  border-radius: 30px;
+  border-radius: 5px;
 }
 .badges__list .filter input:focus {
   border: none;
