@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import BadgesList from "../components/BadgesList.js";
 import MainButton from "../components/MainButton.js";
 import { Loader, LoaderMini } from "../components/Loader.js";
-import Error from "../components/Error.js";
+import Error from "../components/NotFound.js";
 
 import confLogo from "../assets/images/badge-header.svg";
 import "./styles/badges.css";

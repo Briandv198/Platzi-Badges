@@ -7,6 +7,7 @@ import BadgeNew from "../pages/BadgeNew";
 import BadgeEdit from "../pages/BadgeEdit";
 import BadgeDetailsContainer from "../pages/BadgeDetailsContainer";
 import Badges from "../pages/Badges";
+import NotFound from "./NotFound";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             component={BadgeDetailsContainer}
           />
           <Route exact path="/badges/:badgeId/edit" component={BadgeEdit} />
+          <Route component={NotFound} />
         </Switch>
       </Layout>
     </BrowserRouter>
