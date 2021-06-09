@@ -6,8 +6,6 @@ import MainButton from "../components/MainButton.js";
 import confLogo from "../assets/images/badge-header.svg";
 import "./styles/root.css";
 
-import ImageHero from "../assets/images/space.png";
-
 class Root extends React.Component {
   render() {
     return (
