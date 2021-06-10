@@ -37,14 +37,11 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sparragus/platzi-badges.git"
+    "url": "git+https://github.com/Briandv198/Platzi-Badges.git"
   },
   "keywords": [],
   "author": "brian <briandv198@gmail.com>",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Sparragus/platzi-badges/issues"
-  },
-  "homepage": "https://github.com/Sparragus/platzi-badges#readme",
+  "homepage": "https://github.com/Briandv198/Platzi-Badges",
   "description": ""
 }
