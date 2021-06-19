@@ -15,16 +15,16 @@ function DeleteBadgeModal(props) {
 
       <div className="delete-buttons">
         <MainButton
-          onClick={props.onClose}
-          className="cancel-button"
-          content="Cancel"
-          color="green"
-        />
-        <MainButton
           onClick={props.onDeleteBadge}
           className="delete-button"
           content="Delete"
           color="red"
+        />
+        <MainButton
+          onClick={props.onClose}
+          className="cancel-button"
+          content="Cancel"
+          color="green"
         />
       </div>
     </Modal>
